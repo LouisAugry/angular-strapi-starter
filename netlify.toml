@@ -7,5 +7,5 @@
 
 [build]
   base    = "apps/frontend"
-  publish = "apps/frontend/dist/angular-strapi-starter"
-  command = "npm run build-netlify"
+  publish = "apps/frontend/dist/frontend"
+  command = "npm run build-prod"
