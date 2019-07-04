@@ -6,6 +6,6 @@
 #    that is where we will look for package.json/.nvmrc/etc not repo root!
 
 [build]
-  base    = "frontend"
-  publish = "apps/frontend/dist/apps/angular-strapi-starter"
+  base    = "apps/frontend"
+  publish = "apps/frontend/dist/angular-strapi-starter"
   command = "npm run build-netlify"
