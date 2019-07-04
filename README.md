@@ -229,3 +229,26 @@ git commit -am "Changes to my-project noted"
 git push heroku master
 heroku open
 ```
+
+# Deploy Angular to Netlify
+
+ 1. If you have not signed up yet on netlify, visit www.netlify.com and
+    click Login
+
+ 2. Login with your Github account.
+
+ 3. Click New Site from Git
+
+ 4. Select Github under Continuous Deployment and Authorize netlify’s
+        access to your github repository. This takes you to next step: Pick
+        a repository
+
+ 5. Search and select the repository on your github you would like to
+        publish to Netlify
+
+ 6. At the third stage: ‘Build options, and deploy!’, select the
+        **master**  branch.
+
+ 7. Click  **Deploy site** (let empty basic build settings)
+
+ 8. Now at each push to the master branch, it's going to deploy
