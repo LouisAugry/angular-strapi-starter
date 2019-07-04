@@ -2,6 +2,16 @@
 
 This repository is a starter with **Angular** for the front end and **Strapi** for the back end. You can easily deploy these applications on **Netlify** for Angular and **Heroku** for Strapi. To do this, please follow the instructions below
 
+# Clone the repository
+
+First, clone the repository inside your local folder and install dependencies
+
+    git clone https://github.com/LouisAugry/angular-strapi-starter.git
+    cd apps/backend
+    npm install
+    cd ../frontend
+    npm install
+
 
 # Deploy Strapi to Heroku
 
