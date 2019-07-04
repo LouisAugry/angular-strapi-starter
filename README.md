@@ -79,10 +79,11 @@ package-lock.json
 
 Even if it is usually recommended to version this file, it may create issues on Heroku.
 
-### 4. Commit your project
+### 4. Init a Git repository and commit your project
 
 Commit your project to your repository.
 ```
+git init
 git add .
 git commit -am "Initial Commit"
 ```
@@ -90,8 +91,6 @@ git commit -am "Initial Commit"
 ### 5. Create a Heroku project
 
 Create a new Heroku project.
-
-`Path: ./apps/backend`
 
 ```
 heroku create
@@ -103,8 +102,6 @@ heroku create
 >
 > If you have a Heroku project app already created. You would use the
 > following step to initialize your local project folder:
->
-> `Path: ./apps/backend`
 >
 > ```
 > heroku git:remote -a your-heroku-app-name
@@ -120,8 +117,6 @@ Follow these steps to deploy your Strapi app to Heroku using  **PostgreSQL**:
 
 To make things even easier, Heroku provides a powerful addon system. In this section, you are going to use the Heroku Postgres addon, which provides a free "Hobby Dev" plan. If you plan to deploy your app in production, it is highly recommended to switch to a paid plan.
 
-`Path: ./apps/backend`
-
 ```
 heroku addons:create heroku-postgresql:hobby-dev
 ```
@@ -129,8 +124,6 @@ heroku addons:create heroku-postgresql:hobby-dev
 ##### 2. Retrieve database credentials
 
 The add-on automatically exposes the database credentials into a single environment variable accessible by your app. To retrieve it, type:
-
-`Path: ./apps/backend`
 
 ```
 heroku config
@@ -200,15 +193,11 @@ git commit -am "Update database config"
 
 ### 8. Deploy
 
-`Path: ./apps/backend`
-
 ```
-git push heroku master
+git subtree push apps/backend server heroku master
 ```
 
 The deployment may take a few minutes. At the end, logs will display the url of your project (e.g.  `https://mighty-taiga-80884.herokuapp.com`). You can also open your project using the command line:
-
-`Path: ./apps/backend`
 
 ```
 heroku open
