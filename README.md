@@ -7,7 +7,8 @@ This repository is a starter with **Angular** for the front end and **Strapi** f
 First, clone the repository inside your local folder and install dependencies
 
     git clone https://github.com/LouisAugry/angular-strapi-starter.git
-    cd apps/backend
+    mv angular-strapi-starter your-new-name
+    cd your-new-name/apps/backend
     npm install
     cd ../frontend
     npm install
@@ -67,19 +68,7 @@ heroku login
 
 Follow the instructions and return to your command line.
 
-### 3. Update  `.gitignore`
-
-Add the following line at end of  `.gitignore`:
-
-`Path: ./apps/backend/.gitignore`
-
-```
-package-lock.json
-```
-
-Even if it is usually recommended to version this file, it may create issues on Heroku.
-
-### 4. Init a Git repository and commit your project
+### 3. Init a Git repository and commit your project
 
 Commit your project to your repository.
 ```
@@ -88,7 +77,7 @@ git add .
 git commit -am "Initial Commit"
 ```
 
-### 5. Create a Heroku project
+### 4. Create a Heroku project
 
 Create a new Heroku project.
 
@@ -109,7 +98,7 @@ heroku create
 
 Your local development environment is now set-up and configured to work with Heroku. You have a new Strapi project and a new Heroku app ready to be configured to work with a database and with each other.
 
-### 6. Heroku Database set-up
+### 5. Heroku Database set-up
 
 Follow these steps to deploy your Strapi app to Heroku using  **PostgreSQL**:
 
@@ -185,13 +174,13 @@ Unless you originally installed Strapi with PostgreSQL, you need to install the 
 npm install pg --save
 ```
 
-### 7. Commit your changes
+### 6. Commit your changes
 
 ```
 git commit -am "Update database config"
 ```
 
-### 8. Deploy
+### 7. Deploy
 
 ```
 git subtree push apps/backend server heroku master
@@ -213,7 +202,7 @@ You can now continue with the  [Tutorial - Creating an Admin User](https://strap
 > production. To update content structure, please make your changes
 > locally and deploy again.
 
-### 9. Project updates
+### 8. Project updates
 
 When Strapi is deployed to Heroku, Heroku sets the environment variable to  `NODE_ENV=production`. In  `production mode`  Strapi disables the content-type builder (for security reasons). Additionally, if you wanted to change the default production mode in Heroku, it wouldn't work as the file system is temporary. Strapi writes files to the server when you update the content-types and these updates would disappear when Heroku restarts the server.
 
